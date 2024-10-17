@@ -1,0 +1,69 @@
+body {
+    margin: 0;
+    font-family: "PingFang SC", "Microsoft Yahei", sans-serif;
+    background-image: url('博物馆.jpg'); /* 替换为你的图片路径 */
+    background-size: cover; /* 自动调整背景图以覆盖整个屏幕 */
+    background-position: center; /* 使背景图片居中 */
+    background-repeat: no-repeat; /* 防止背景图片重复 */
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 10px;
+    color: #ecce0e;
+    font-family: "微软雅黑", sans-serif;
+}
+
+input {
+    background-color: rgba(222, 186, 130, 0.2); /* 设置透明背景 */
+    border: 1px solid #ccc; /* 添加浅灰色边框 */
+    padding: 10px; /* 输入框内边距 */
+    color: black; /* 输入文本颜色 */
+    border-radius: 4px; /* 圆角 */
+}
+
+form {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: rgba(236, 190, 190, 0.2); /* 设置透明背景 */
+
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2); /* 阴影效果 */
+
+}
+
+label {
+    font-weight: bold;
+    margin-top: 10px;
+    color: black;
+    font-family: "微软雅黑", sans-serif;
+    font-size: larger;
+}
+
+input.form-control,
+select.form-control {
+    background-color: rgba(232, 207, 189, 0.4);
+    margin-bottom: 15px;
+}
+
+button {
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.3); /* 透明背景 */
+    border: 1px solid #ccc; /* 浅灰色边框，与输入框一致 */
+    padding: 10px; /* 按钮内边距 */
+    color: black; /* 按钮文本颜色 */
+    border-radius: 4px; /* 圆角 */
+    cursor: pointer; /* 鼠标悬停时指针样式 */
+}
+
+button:hover {
+    background-color: rgba(255, 255, 255, 0.5); /* 鼠标悬停时稍微加深透明度 */
+}
+
+#result {
+    text-align: center;
+    margin-top: 20px;
+    font-weight: bold;
+    color: green;
+}

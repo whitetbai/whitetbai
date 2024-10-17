@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>用户注册</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+<div class="container">
+    <h2>用户注册</h2>
+
+    <form id="registerForm">
+        <!-- 用户信息部分 -->
+        <div>
+            <label for="userId">用户ID:</label>
+            <input type="number" id="userId" name="userId" class="form-control" required><br>
+
+            <label for="name">姓名:</label>
+            <input type="text" id="name" name="name" class="form-control" required><br>
+
+            <label for="idNumber">身份证号:</label>
+            <input type="text" id="idNumber" name="idNumber" class="form-control" required><br>
+
+            <label for="phoneNumber">手机号:</label>
+            <input type="text" id="phoneNumber" name="phoneNumber" class="form-control" required><br>
+        </div>
+
+        <button type="submit" class="btn btn-primary">提交注册</button>
+    </form>
+
+    <div id="result"></div>
+</div>
+
+<script>
+    const registerForm = document.getElementById('registerForm');
+
+    registerForm.addEventListener('submit', function(event) {
+        event.preventDefault(); // 阻止表单的默认提交行为
+
+        const formData = {
+            userId: parseInt(document.getElementById('userId').value, 10),
+            name: document.getElementById('name').value,
+            idNumber: document.getElementById('idNumber').value,
+            phoneNumber: document.getElementById('phoneNumber').value
+        };
+
+        // 打印请求数据
+        console.log('Sending data:', JSON.stringify(formData));
+
+        // 提交表单数据到后端
+        fetch('http://localhost:8080/api/auth/register', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(formData)
+        })
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error('Network response was not ok ' + response.statusText);
+                }
+                return response.json(); // 解析 JSON 响应
+            })
+            .then(data => {
+                document.getElementById('result').innerText = "注册结果: " + data.message;
+            })
+            .catch(error => {
+                console.error('Error:', error);
+                document.getElementById('result').innerText = "注册失败: " + error.message;
+            });
+    });
+</script>
+</body>
+</html>

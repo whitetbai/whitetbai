@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="b0711514-4d68-4e18-8d91-39f3b7c4a677" name="Changes" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+        <option value="HTML File" />
+      </list>
+    </option>
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 5
+}</component>
+  <component name="ProjectId" id="2mPoieqNsMkTePZi4I9glkgY4aL" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
+    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
+    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
+    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
+    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;Spring Boot.TicketsystemApplication.executor&quot;: &quot;Run&quot;,
+    &quot;ToolWindowRun.ShowToolbar&quot;: &quot;false&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/李春洋/IdeaProjects/ticketsystem&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;MavenSettings&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  }
+}</component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\李春洋\IdeaProjects\ticketsystem\src\main\java\com\museum\ticketsystem\config" />
+      <recent name="C:\Users\李春洋\IdeaProjects\ticketsystem\lib" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="TicketsystemApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <option name="FRAME_DEACTIVATION_UPDATE_POLICY" value="UpdateClassesAndResources" />
+      <module name="ticketsystem" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.museum.ticketsystem.TicketsystemApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="jdk-17.0.10-corretto-17.0.10-4caba194b151-5cd809f4" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="b0711514-4d68-4e18-8d91-39f3b7c4a677" name="Changes" comment="" />
+      <created>1726987700848</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1726987700848</updated>
+      <workItem from="1726987701828" duration="2612000" />
+      <workItem from="1727052943520" duration="3754000" />
+      <workItem from="1727094516038" duration="1421000" />
+      <workItem from="1727252531392" duration="4575000" />
+      <workItem from="1727333256033" duration="5493000" />
+      <workItem from="1727339467558" duration="166000" />
+      <workItem from="1727340091022" duration="228000" />
+      <workItem from="1727418538665" duration="3465000" />
+      <workItem from="1727593078360" duration="1996000" />
+      <workItem from="1727598177392" duration="1728000" />
+      <workItem from="1727600332755" duration="2142000" />
+      <workItem from="1727663461859" duration="868000" />
+      <workItem from="1727699656249" duration="4409000" />
+      <workItem from="1727853974611" duration="848000" />
+      <workItem from="1728005061865" duration="3338000" />
+      <workItem from="1728008614876" duration="309000" />
+      <workItem from="1728025009602" duration="6070000" />
+      <workItem from="1728131061449" duration="100000" />
+      <workItem from="1728131181898" duration="3079000" />
+      <workItem from="1728197460419" duration="4633000" />
+      <workItem from="1728269620771" duration="1059000" />
+      <workItem from="1728285639781" duration="5554000" />
+      <workItem from="1728352820955" duration="1597000" />
+      <workItem from="1728627836727" duration="2695000" />
+      <workItem from="1728699528026" duration="233000" />
+      <workItem from="1728712436119" duration="11302000" />
+      <workItem from="1728744188467" duration="4556000" />
+      <workItem from="1728787767289" duration="1464000" />
+      <workItem from="1728810174828" duration="3174000" />
+      <workItem from="1728870374123" duration="854000" />
+      <workItem from="1728905058169" duration="6242000" />
+      <workItem from="1728977078823" duration="61000" />
+      <workItem from="1728977187262" duration="428000" />
+      <workItem from="1729068662634" duration="298000" />
+      <workItem from="1729072925697" duration="101000" />
+      <workItem from="1729073133328" duration="69000" />
+      <workItem from="1729076005605" duration="519000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>

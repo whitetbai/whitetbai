@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>用户登录与购票</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="container">
+    <h1>用户登录与购票</h1>
+
+    <form id="ticketBookingForm" class="login-form">
+        <!-- 用户信息部分 -->
+        <div>
+            <label for="userId">用户ID:</label>
+            <input type="number" id="userId" name="userId" class="form-control" required><br>
+
+            <label for="name">姓名:</label>
+            <input type="text" id="name" name="name" class="form-control" required><br>
+
+            <label for="idNumber">身份证号:</label>
+            <input type="text" id="idNumber" name="idNumber" class="form-control" required><br>
+
+            <label for="phoneNumber">手机号:</label>
+            <input type="text" id="phoneNumber" name="phoneNumber" class="form-control" required><br>
+        </div>
+
+        <!-- 购票信息部分 -->
+        <div>
+            <label for="ticketId">票种:</label>
+            <select id="ticketId" name="ticketId" class="form-control" required>
+                <option value="1">瓷器馆 (50元)</option>
+                <option value="2">钟表馆 (30元)</option>
+                <option value="3">装饰馆 (40元)</option>
+            </select><br>
+
+            <label for="quantity">订票数量:</label>
+            <input type="number" id="quantity" name="quantity" class="form-control" required><br>
+
+            <label for="orderDate">订票日期:</label>
+            <input type="date" id="orderDate" name="orderDate" class="form-control" required><br>
+
+            <!-- 多个游客信息 -->
+            <div id="visitorInfoContainer">
+                <label for="visitorName">游客姓名:</label>
+                <input type="text" id="visitorName" name="visitorName" class="form-control" required><br>
+
+                <label for="visitorIDNumber">游客身份证号:</label>
+                <input type="text" id="visitorIDNumber" name="visitorIDNumber" class="form-control" required><br>
+            </div>
+
+            <button type="button" id="addVisitorBtn" class="btn btn-secondary">添加更多游客</button>
+        </div>
+
+        <button type="submit" class="btn btn-primary">提交</button>
+    </form>
+
+    <div id="result"></div>
+</div>
+
+<script>
+    const ticketBookingForm = document.getElementById('ticketBookingForm');
+    const visitorInfoContainer = document.getElementById('visitorInfoContainer');
+    const addVisitorBtn = document.getElementById('addVisitorBtn');
+
+    addVisitorBtn.addEventListener('click', function () {
+        const visitorNameInput = document.createElement('input');
+        visitorNameInput.type = 'text';
+        visitorNameInput.name = 'visitorName';
+        visitorNameInput.className = 'form-control';
+        visitorNameInput.placeholder = '游客姓名';
+        visitorInfoContainer.appendChild(visitorNameInput);
+
+        const visitorIDNumberInput = document.createElement('input');
+        visitorIDNumberInput.type = 'text';
+        visitorIDNumberInput.name = 'visitorIDNumber';
+        visitorIDNumberInput.className = 'form-control';
+        visitorIDNumberInput.placeholder = '游客身份证号';
+        visitorInfoContainer.appendChild(visitorIDNumberInput);
+    });
+
+    ticketBookingForm.addEventListener('submit', function(event) {
+        event.preventDefault(); // 阻止表单的默认提交行为
+
+        const formData = {
+            userId: parseInt(document.getElementById('userId').value, 10),
+            ticketId: parseInt(document.getElementById('ticketId').value, 10),
+            quantity: parseInt(document.getElementById('quantity').value, 10),
+            orderDate: document.getElementById('orderDate').value,
+            visitors: []  // 游客信息
+        };
+
+        // 获取所有游客信息
+        const visitorNames = document.getElementsByName('visitorName');
+        const visitorIDNumbers = document.getElementsByName('visitorIDNumber');
+
+        for (let i = 0; i < visitorNames.length; i++) {
+            const visitor = {
+                visitorName: visitorNames[i].value,
+                visitorIDNumber: visitorIDNumbers[i].value
+            };
+            formData.visitors.push(visitor);  // 添加到游客列表
+        }
+
+        // 打印请求数据
+        console.log('Sending data:', JSON.stringify(formData));
+
+        // 提交表单数据到后端
+        fetch('http://localhost:8080/api/orders/create', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(formData)
+        })
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error('Network response was not ok ' + response.statusText);
+                }
+                return response.json(); // 解析 JSON 响应
+            })
+            .then(data => {
+                document.getElementById('result').innerText = "购票结果: " + data.message;
+            })
+            .catch(error => {
+                console.error('Error:', error);
+                document.getElementById('result').innerText = "购票失败: " + error.message;
+            });
+    });
+</script>
+</body>
+</html>
